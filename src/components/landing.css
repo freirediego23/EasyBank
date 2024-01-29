@@ -1,0 +1,61 @@
+:root {
+  --grayish-blue: hsl(233, 8%, 62%);
+  --light-grayish-blue: hsl(220, 16%, 96%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+
+  --dark-blue: hsl(233, 26%, 24%);
+  --lime-green: hsl(136, 65%, 51%);
+  --bright-cyan: hsl(192, 70%, 51%);
+}
+
+.grayback {
+  background-color: var(--light-grayish-blue);
+  padding-top: 50px;
+  margin-top: 90px;
+}
+
+.grad-back {
+  background: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
+}
+
+.img-container {
+  height: 70%;
+  margin-bottom: -200px;
+}
+
+h1 {
+  font-family: "Public Sans", sans-serif;
+}
+
+.centralize {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mobil {
+  z-index: 0;
+  position: relative;
+  top: -140px;
+}
+
+.cell-img {
+  position: absolute;
+  top: 21%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  z-index: 0;
+}
+
+.img-cont {
+  height: 305px;
+  overflow: hidden;
+}
+
+.resize {
+  width: 100%; /* Set the height of the container */
+  height: auto;
+  object-fit: cover;
+}
