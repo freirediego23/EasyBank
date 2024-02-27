@@ -1,4 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway);
+:root {
+  --grayish-blue: hsl(233, 8%, 62%);
+  --light-grayish-blue: hsl(220, 16%, 96%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+
+  --dark-blue: hsl(233, 26%, 24%);
+  --lime-green: hsl(136, 65%, 51%);
+  --bright-cyan: hsl(192, 70%, 51%);
+}
+
 h2 {
   vertical-align: center;
   text-align: center;
@@ -136,4 +147,24 @@ body {
   .menu > li:not(:last-child) {
     border-bottom: 1px solid #444;
   }
+}
+
+@media (min-width: 1024px) {
+  .menu {
+    display: flex;
+    position: static;
+    margin-top: 0;
+    flex-direction: row;
+    width: auto;
+  }
+
+  .menu > li {
+    color: var(--grayish-blue);
+  }
+}
+
+@media (max-width: 639px) {
+}
+.tiny {
+  display: none;
 }

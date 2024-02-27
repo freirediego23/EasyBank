@@ -3,6 +3,7 @@ import React from "react";
 import Navigation from "./Navigation/Navigation.jsx";
 import MobIcon from "../assets/images/bg-intro-mobile.svg";
 import Cell from "../assets/images/image-mockups.png";
+import Cell_Large_Bg from "../assets/images/bg-intro-desktop.svg";
 import Online from "../assets/images/icon-online.svg";
 import Budget from "../assets/images/icon-budgeting.svg";
 import Onboarding from "../assets/images/icon-onboarding.svg";
@@ -17,79 +18,121 @@ import "./landing.css";
 function Landing() {
   return (
     <>
-      <div className="img-container">
-        <Navigation></Navigation>
-        <img src={MobIcon} alt="icon banner" className="w-full mobil" />
+      <Navigation></Navigation>
+      <div className="lg:flex lg:flex-row-reverse">
+        <div className="img-container ">
+          <img src={MobIcon} alt="icon banner" className="w-full mobil " />
+          <img src={Cell} alt="cellphones" className="cell-img " />
+          <img
+            src={Cell_Large_Bg}
+            alt="cellphones-large screen"
+            className="mobil-large"
+          />
+        </div>
 
-        <img src={Cell} alt="cellphones" className="cell-img" />
+        <div className="head-text-cont">
+          <div className="head-content">
+            <h1 className=" lg:text-left text-center text-5xl ml-2 mr-2 ">
+              Next generation digital banking
+            </h1>
+
+            <p className="lg:text-left lg:ml-2 text-center ml-12 mr-12 text-lg mt-4 low-gray font-bold">
+              Take your financial life online. Your Easybank account will be a
+              one-stop-shop for spending, saving, budgeting, investing, and much
+              more.
+            </p>
+
+            <div className="lg:block flex justify-center mt-8">
+              <button className="rounded-full p-4 bg-red-600 text-white grad-back text-lg w-52">
+                Request Invite
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <h1 className="text-center text-5xl ml-2 mr-2 ">
-        Next generation digital banking
-      </h1>
-
-      <p className="text-center ml-12 mr-12 text-lg mt-4">
-        Take your financial life online. Your Easybank account will be a
-        one-stop-shop for spending, saving, budgeting, investing, and much more.
-      </p>
-
-      <div className="flex justify-center mt-8">
-        <button className="rounded-full p-4 bg-red-600 text-white grad-back text-lg w-52">
-          Request Invite
-        </button>
-      </div>
-
-      <div className="grayback">
-        <h1 className="text-center text-5xl ml-2 mr-2 ">
-          Why choose Easybank?
-        </h1>
-        <p className="text-center ml-12 mr-12 text-lg mt-4">
-          We leverage Open Banking to turn your bank account into your financial
-          hub. Control your finances like never before.
-        </p>
-        <div className="flex justify-center mt-8">
-          <img src={Online} alt="card image" className="text-center" />
+      <div className="grayback pb-20">
+        <div className="top-header">
+          <h1 className="text-center text-5xl ml-2 mr-2 ">
+            Why choose Easybank?
+          </h1>
+          <p className="text-center ml-12 mr-12 text-lg mt-4 low-gray font-bold">
+            We leverage Open Banking to turn your bank account into your
+            financial hub. Control your finances like never before.
+          </p>
         </div>
 
-        <h1 className="text-center text-5xl ml-2 mr-2 mt-8">Online Banking</h1>
-        <p className="text-center ml-12 mr-12 text-lg mt-4">
-          Our modern web and mobile applications allow you to keep track of your
-          finances wherever you are in the world.
-        </p>
-        <div className="flex justify-center mt-8">
-          <img src={Budget} alt="card image" className="text-center" />
-        </div>
+        {/* Paragraphs below easybank */}
+        <div className="grid-container">
+          <div className="para-cont">
+            <div className="flex justify-center lg:justify-start mt-8">
+              <img src={Online} alt="card image" className="text-center" />
+            </div>
 
-        <h1 className="text-center text-5xl ml-2 mr-2 mt-8">
-          Simple Budgeting
-        </h1>
-        <p className="text-center ml-12 mr-12 text-lg mt-4">
-          See exactly where your money goes each month. Receive notifications
-          when you’re close to hitting your limits.
-        </p>
-        <div className="flex justify-center mt-8">
-          <img src={Onboarding} alt="card image" className="text-center" />
-        </div>
+            <h1 className="text-center text-2xl ml-2 mr-2 mt-8 lg:ml-0">
+              Online Banking
+            </h1>
+            <p className="text-center ml-12 mr-12 text-lg mt-4 low-gray font-bold lg:ml-0">
+              Our modern web and mobile applications allow you to keep track of
+              your finances wherever you are in the world.
+            </p>
+          </div>
 
-        <h1 className="text-center text-5xl ml-2 mr-2 mt-8">Fast Onboarding</h1>
-        <p className="text-center ml-12 mr-12 text-lg mt-4">
-          We don’t do branches. Open your account in minutes online and start
-          taking control of your finances right away.
-        </p>
-        <div className="flex justify-center mt-8">
-          <img src={Icon_api} alt="card image" className="text-center" />
-        </div>
+          <div className="para-cont">
+            <div className="flex justify-center lg:justify-start mt-8">
+              <img
+                src={Budget}
+                alt="card image"
+                className="text-center lg:text-left"
+              />
+            </div>
 
-        <h1 className="text-center text-5xl ml-2 mr-2 mt-8">Open API</h1>
-        <p className="text-center ml-12 mr-12 text-lg mt-4">
-          Manage your savings, investments, pension, and much more from one
-          account. Tracking your money has never been easier.
-        </p>
+            <h1 className="text-center text-2xl ml-2 mr-2 mt-8 lg:ml-0">
+              Simple Budgeting
+            </h1>
+            <p className="text-center ml-12 mr-12 text-lg mt-4 low-gray font-bold lg:ml-0">
+              See exactly where your money goes each month. Receive
+              notifications when you’re close to hitting your limits.
+            </p>
+          </div>
+
+          <div className="para-cont">
+            <div className="flex justify-center lg:justify-start mt-8">
+              <img
+                src={Onboarding}
+                alt="card image"
+                className="text-center lg:text-left"
+              />
+            </div>
+
+            <h1 className="text-center text-2xl ml-2 mr-2 mt-8 lg:ml-0">
+              Fast Onboarding
+            </h1>
+            <p className="text-center ml-12 mr-12 text-lg mt-4 low-gray font-bold lg:ml-0">
+              We don’t do branches. Open your account in minutes online and
+              start taking control of your finances right away.
+            </p>
+          </div>
+
+          <div className="para-cont">
+            <div className="flex justify-center lg:justify-start mt-8">
+              <img src={Icon_api} alt="card image" className="text-center" />
+            </div>
+
+            <h1 className="text-center text-2xl ml-2 mr-2 mt-8 lg:ml-0">
+              Open API
+            </h1>
+            <p className="text-center ml-12 mr-12 text-lg mt-4 low-gray font-bold lg:ml-0">
+              Manage your savings, investments, pension, and much more from one
+              account. Tracking your money has never been easier.
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Latest Articles Section */}
 
-      <h1 className="text-center text-5xl ml-2 mr-2 mt-8">Latest Articles</h1>
+      <h1 className="text-center text-5xl ml-2 mr-2 mt-20">Latest Articles</h1>
 
       <div className="flex justify-center mt-8 img-cont ml-6 mr-6">
         <img src={Dollars} alt="card image" className="text-center resize" />

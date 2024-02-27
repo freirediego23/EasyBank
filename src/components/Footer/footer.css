@@ -12,3 +12,7 @@
 .blue-col {
   background-color: var(--dark-blue);
 }
+
+.low-gray {
+  color: var(--grayish-blue);
+}

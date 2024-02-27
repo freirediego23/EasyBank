@@ -34,6 +34,27 @@ h1 {
   margin-right: auto;
 }
 
+.img-cont {
+  height: 305px;
+  overflow: hidden;
+}
+
+.resize {
+  width: 100%; /* Set the height of the container */
+  height: auto;
+  object-fit: cover;
+}
+
+.low-gray {
+  color: var(--grayish-blue);
+}
+
+.mobil-large {
+  display: none;
+}
+
+/* Special condition for smaller devices */
+
 .mobil {
   z-index: 0;
   position: relative;
@@ -45,17 +66,90 @@ h1 {
   top: 21%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
+  width: 100%;
+  max-width: 59%;
   z-index: 0;
 }
 
-.img-cont {
-  height: 305px;
-  overflow: hidden;
+.mobil-large {
+  display: none;
 }
 
-.resize {
-  width: 100%; /* Set the height of the container */
-  height: auto;
-  object-fit: cover;
+@media only screen and (max-width: 600px) {
 }
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1024px) {
+  .cell-img {
+    position: absolute;
+    top: -18%;
+    /* Adjust width as needed */
+    max-width: 100%; /* Ensure the image does not overextend */
+    left: calc(110% - 250px); /* Adjust the left position to center the image */
+    transform: translateX(-65%);
+  }
+  .img-container {
+    overflow: hidden;
+    position: relative; /* Ensure the container's positioning context */
+    width: 100%; /* Set width to 100% to contain the image */
+  }
+
+  .mobil {
+    display: none;
+  }
+
+  .mobil-large {
+    display: inline-block; /* Show the large screen image on larger screens */
+    z-index: 2;
+  }
+
+  .grayback {
+    margin-top: 200px;
+  }
+
+  .head-text-cont {
+    max-width: 100%;
+    width: 80%;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+  .head-content {
+    padding-top: 100px;
+  }
+
+  .top-header {
+    max-width: 100%;
+    width: 700px;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    text-align: left;
+  }
+
+  .para-cont img {
+    display: block;
+    margin: 0;
+  }
+
+  .para-cont h1,
+  .para-cont p {
+    text-align: left;
+  }
+}
+
+/* Extra small devices (phones, 600px and down)
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {...} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {...} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {...} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {...} */

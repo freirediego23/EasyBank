@@ -15,12 +15,16 @@ function Navigation() {
             <div className="menu-button"></div>
           </label>
           <ul className="menu">
-            <li>One</li>
-            <li>Two</li>
-            <li>Three</li>
-            <li>Four</li>
-            <li>Five</li>
+            <li className="lg:text-sm font-bold">One</li>
+            <li className="lg:text-sm font-bold">Two</li>
+            <li className="lg:text-sm font-bold">Three</li>
+            <li className="lg:text-sm font-bold">Four</li>
+            <li className="lg:text-sm font-bold">Five</li>
           </ul>
+
+          <button className="tiny sm:hidden md:hidden lg:block rounded-full p-2 bg-red-600 text-white grad-back text-sm w-36 mr-20">
+            Request Invite
+          </button>
         </section>
       </div>
     </div>
