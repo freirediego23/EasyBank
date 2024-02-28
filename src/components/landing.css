@@ -128,6 +128,12 @@ h1 {
     text-align: left;
   }
 
+  /* 120px is the left and right space of the paragraphs  */
+  .gray-wrap {
+    margin-left: 120px;
+    margin-right: 120px;
+  }
+
   .para-cont img {
     display: block;
     margin: 0;
